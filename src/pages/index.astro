@@ -1,0 +1,285 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Counter from '../components/Counter.vue';
+---
+
+<Layout>
+    <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+        <!-- Header -->
+        <header class="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 shadow-2xl">
+            <div class="absolute inset-0 bg-black opacity-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-white/10"></div>
+
+            <div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <div class="mb-6 inline-flex items-center rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">
+                        ✨ Modern Web Development Stack
+                    </div>
+                    <h1 class="mb-4 text-5xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl">
+                        <span class="block">Astro + Vue.js</span>
+                        <span class="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent"> Tailwind + PrimeVue </span>
+                    </h1>
+                    <p class="mx-auto max-w-3xl text-xl leading-relaxed text-blue-100 sm:text-2xl">
+                        Build lightning-fast, beautiful web applications with the perfect combination of modern tools
+                    </p>
+                    <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                        <div class="flex items-center space-x-2 rounded-lg bg-white/10 px-4 py-2 text-white backdrop-blur-sm">
+                            <span class="h-2 w-2 rounded-full bg-green-400"></span>
+                            <span class="text-sm font-medium">Production Ready</span>
+                        </div>
+                        <div class="flex items-center space-x-2 rounded-lg bg-white/10 px-4 py-2 text-white backdrop-blur-sm">
+                            <span class="h-2 w-2 rounded-full bg-blue-400"></span>
+                            <span class="text-sm font-medium">TypeScript Support</span>
+                        </div>
+                        <div class="flex items-center space-x-2 rounded-lg bg-white/10 px-4 py-2 text-white backdrop-blur-sm">
+                            <span class="h-2 w-2 rounded-full bg-purple-400"></span>
+                            <span class="text-sm font-medium">SEO Optimized</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decorative elements -->
+            <div class="absolute right-0 -bottom-1 left-0 h-4 bg-gradient-to-r from-blue-50 to-indigo-100"></div>
+        </header>
+
+        <!-- Hero Section with Demo -->
+        <section class="relative overflow-hidden bg-gradient-to-br from-slate-50 to-blue-50 px-4 py-20 sm:px-6 lg:px-8">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent)] opacity-60"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent)] opacity-40"></div>
+
+            <div class="relative mx-auto max-w-7xl">
+                <!-- Header -->
+                <div class="mb-16 text-center">
+                    <div
+                        class="mb-6 inline-flex items-center rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-2 text-sm font-medium text-white shadow-lg"
+                    >
+                        ✨ Modern Stack
+                    </div>
+                    <h2 class="mb-6 text-4xl font-bold text-gray-900 sm:text-5xl lg:text-6xl">
+                        Welcome to the
+                        <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Future of Web Development </span>
+                    </h2>
+                    <p class="mx-auto max-w-3xl text-xl leading-relaxed text-gray-600">
+                        This starter template combines the power of
+                        <span class="font-semibold text-blue-600">Astro</span> for SSR & SSG,
+                        <span class="font-semibold text-green-600">Vue.js</span> for interactive components,
+                        <span class="font-semibold text-purple-600">Tailwind CSS</span> for styling, and
+                        <span class="font-semibold text-orange-600">PrimeVue</span> for rich UI components.
+                    </p>
+                </div>
+
+                <!-- Main Content Grid -->
+                <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+                    <!-- Left: Technology Cards -->
+                    <div class="col-span-2 space-y-6">
+                        <div class="grid grid-cols-1 gap-6 sm:grid-cols-4">
+                            <div
+                                class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 p-6 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                            >
+                                <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
+                                <div class="relative">
+                                    <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm">
+                                        <span class="text-lg font-bold text-white">A</span>
+                                    </div>
+                                    <h3 class="mb-2 text-lg font-bold text-white">Astro</h3>
+                                    <p class="text-sm text-blue-100">Static site generator with partial hydration for optimal performance</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-green-500 to-green-600 p-6 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                            >
+                                <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
+                                <div class="relative">
+                                    <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm">
+                                        <span class="text-lg font-bold text-white">V</span>
+                                    </div>
+                                    <h3 class="mb-2 text-lg font-bold text-white">Vue.js 3</h3>
+                                    <p class="text-sm text-green-100">Progressive JavaScript framework with composition API</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 p-6 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                            >
+                                <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
+                                <div class="relative">
+                                    <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm">
+                                        <span class="text-lg font-bold text-white">T</span>
+                                    </div>
+                                    <h3 class="mb-2 text-lg font-bold text-white">Tailwind</h3>
+                                    <p class="text-sm text-purple-100">Utility-first CSS framework for rapid UI development</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 p-6 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                            >
+                                <div class="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
+                                <div class="relative">
+                                    <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm">
+                                        <span class="text-lg font-bold text-white">P</span>
+                                    </div>
+                                    <h3 class="mb-2 text-lg font-bold text-white">PrimeVue</h3>
+                                    <p class="text-sm text-orange-100">Rich UI component library with modern design system</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Counter Demo -->
+                    <div class="relative col-span-2">
+                        <div class="mb-6 text-center">
+                            <div
+                                class="mb-4 inline-flex items-center rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-3 py-1 text-xs font-medium text-white shadow-lg"
+                            >
+                                🚀 Live Demo
+                            </div>
+                            <h3 class="mb-3 text-2xl font-bold text-gray-900">
+                                Interactive Component
+                                <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Showcase </span>
+                            </h3>
+                            <p class="text-gray-600">Experience Vue.js components with Astro's partial hydration</p>
+                        </div>
+
+                        <!-- Counter Container -->
+                        <div class="relative">
+                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/80 to-blue-50/80 shadow-2xl backdrop-blur-sm"></div>
+                            <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-blue-600 to-purple-600 opacity-20 blur"></div>
+
+                            <div class="relative rounded-3xl bg-white/90 p-8 shadow-xl backdrop-blur-sm">
+                                <div class="flex justify-center">
+                                    <Counter client:load />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Getting Started -->
+        <section class="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 px-4 py-20 sm:px-6 lg:px-8">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(59,130,246,0.3),transparent)] opacity-40"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3),transparent)] opacity-40"></div>
+
+            <div class="relative mx-auto max-w-5xl text-center">
+                <div class="mb-6 inline-flex items-center rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">
+                    🚀 Ready to Start?
+                </div>
+                <h2 class="mb-8 text-4xl font-bold text-white sm:text-5xl">
+                    Get Started in
+                    <span class="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent"> Minutes </span>
+                </h2>
+                <p class="mx-auto mb-12 max-w-3xl text-xl text-blue-100">Copy these commands and start building your next amazing web application</p>
+
+                <div class="relative">
+                    <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 opacity-75 blur"></div>
+                    <div class="relative rounded-2xl bg-black/80 p-8 backdrop-blur-sm">
+                        <div class="text-left">
+                            <pre
+                                class="overflow-x-auto text-sm sm:text-base">
+                                <code class="text-green-400">
+<span class="text-gray-500"># Clone this repository</span>
+git clone your-repo-url astro-starter
+
+<span class="text-gray-500"># Navigate to project</span>
+cd astro-starter
+
+<span class="text-gray-500"># Install dependencies</span>
+npm install
+
+<span class="text-gray-500"># Start development server</span>
+npm run dev
+
+<span class="text-gray-500"># Build for production</span>
+npm run build
+                                </code>
+                            </pre>
+                        </div>
+
+                        <!-- Quick stats -->
+                        <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
+                            <div class="rounded-lg bg-white/10 p-4 text-center backdrop-blur-sm">
+                                <div class="text-2xl font-bold text-white">< 30s</div>
+                                <div class="text-sm text-blue-200">Setup Time</div>
+                            </div>
+                            <div class="rounded-lg bg-white/10 p-4 text-center backdrop-blur-sm">
+                                <div class="text-2xl font-bold text-white">< 1MB</div>
+                                <div class="text-sm text-blue-200">Bundle Size</div>
+                            </div>
+                            <div class="rounded-lg bg-white/10 p-4 text-center backdrop-blur-sm">
+                                <div class="text-2xl font-bold text-white">100</div>
+                                <div class="text-sm text-blue-200">Lighthouse Score</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="relative bg-gradient-to-br from-gray-900 via-slate-900 to-black py-16 text-white">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent)]"></div>
+
+            <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <div class="mb-8">
+                        <h3 class="mb-4 text-3xl font-bold">
+                            Ready to build
+                            <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> amazing applications? </span>
+                        </h3>
+                        <p class="text-lg text-gray-300">Join thousands of developers building the future with modern web technologies</p>
+                    </div>
+
+                    <!-- Technology links -->
+                    <div class="mb-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
+                        <a href="https://astro.build" class="group rounded-xl bg-white/5 p-6 transition-all duration-300 hover:scale-105 hover:bg-white/10">
+                            <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-500/20">
+                                <span class="text-xl font-bold text-blue-400">A</span>
+                            </div>
+                            <h4 class="font-semibold text-white transition-colors group-hover:text-blue-400">Astro</h4>
+                            <p class="text-sm text-gray-400">Web Framework</p>
+                        </a>
+
+                        <a href="https://vuejs.org" class="group rounded-xl bg-white/5 p-6 transition-all duration-300 hover:scale-105 hover:bg-white/10">
+                            <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-green-500/20">
+                                <span class="text-xl font-bold text-green-400">V</span>
+                            </div>
+                            <h4 class="font-semibold text-white transition-colors group-hover:text-green-400">Vue.js</h4>
+                            <p class="text-sm text-gray-400">Progressive Framework</p>
+                        </a>
+
+                        <a href="https://tailwindcss.com" class="group rounded-xl bg-white/5 p-6 transition-all duration-300 hover:scale-105 hover:bg-white/10">
+                            <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-500/20">
+                                <span class="text-xl font-bold text-purple-400">T</span>
+                            </div>
+                            <h4 class="font-semibold text-white transition-colors group-hover:text-purple-400">Tailwind</h4>
+                            <p class="text-sm text-gray-400">CSS Framework</p>
+                        </a>
+
+                        <a href="https://primevue.org" class="group rounded-xl bg-white/5 p-6 transition-all duration-300 hover:scale-105 hover:bg-white/10">
+                            <div class="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-lg bg-orange-500/20">
+                                <span class="text-xl font-bold text-orange-400">P</span>
+                            </div>
+                            <h4 class="font-semibold text-white transition-colors group-hover:text-orange-400">PrimeVue</h4>
+                            <p class="text-sm text-gray-400">UI Components</p>
+                        </a>
+                    </div>
+
+                    <!-- Bottom section -->
+                    <div class="border-t border-gray-800 pt-8">
+                        <div class="flex flex-col items-center justify-between space-y-4 sm:flex-row sm:space-y-0">
+                            <p class="text-gray-400">© 2024 Astro + Vue.js + Tailwind + PrimeVue Starter Kit</p>
+                            <div class="flex items-center space-x-2">
+                                <span class="h-2 w-2 rounded-full bg-green-500"></span>
+                                <span class="text-sm text-gray-400">Ready for production</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</Layout>
